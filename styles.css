@@ -1,0 +1,106 @@
+body {
+  background-color: #6E7B8B;
+}
+.city {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+#city {
+  font-family: 'Russo One', sans-serif;
+  font-size: 4em;
+}
+.confirm_selection {
+    -webkit-transition: text-shadow 1s linear;
+    -moz-transition: text-shadow 1s linear;
+    -ms-transition: text-shadow 1s linear;
+    -o-transition: text-shadow 1s linear;
+    transition: text-shadow 1s linear;
+}
+.confirm_selection:hover,
+.confirm_selection.glow {
+    text-shadow: 0 0 50px black;
+}
+.centered {
+  text-align: center;
+}
+div span {
+  font-size: 2em;
+  color: white;
+}
+#temperature {
+  color: #95b8e3;
+}
+#temperature:hover {
+  color: #2c3744;
+  cursor: pointer;
+}
+
+.cloud {
+  top: 100px;
+  left: 40%;
+  width: 40px; 
+  height: 15px;
+  background: #f2f9fe;
+  background: linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+  background: -webkit-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	background: -moz-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	background: -ms-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	background: -o-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+  border-radius: 30px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+  position: absolute;
+} 
+.cloud:after, .cloud:before {
+	content: '';
+	position: absolute;
+	background: #f2f9fe;
+	z-index: -1
+}
+.cloud:after {
+	width: 15px; height: 15px;
+	top: -7px; left: 20px;
+	
+	border-radius: 30px;
+	-webkit-border-radius: 300px;
+	-moz-border-radius: 300px;
+}
+.cloud:before {
+	width: 20px; height: 20px;
+	top: -10px; right: 15px;
+	
+	border-radius: 30px;
+	-webkit-border-radius: 300px;
+	-moz-border-radius: 300px;
+}
+.cloud:nth-child(2) {
+  position: relative;
+  top: 110px;
+   width: 30px;
+   height:12px;
+  z-index: -1;
+  background: #fff;
+  opacity: 0.5;
+  transform: scale(0.8) translate(3rem, -3rem);
+  animation: cloud 4s linear infinite;
+}
+.cloud:nth-child(2):before {
+  top: -8px; right: 12px;
+  width: 12px;
+  height: 12px;
+}
+.cloud:nth-child(2):after { 
+  top: -5px; left: 15px;
+  width: 10px;
+  height: 10px;
+} 
+
+/* animations */
+ @keyframes cloud { 
+  0% { opacity: 0; }
+  50% { opacity: 0.5; }
+  100% {
+    opacity: 0;
+    transform: scale(0.8, 0.8) translate(-3rem, -3rem);
+  }
+} 
